@@ -22,5 +22,7 @@
     </head>
     <body class="antialiased">
         <h1> Demo Page </h1>
+        <h2>{{$name}} </h2>
+        <h2>{{$id}} </h2>
     </body>
 </html>

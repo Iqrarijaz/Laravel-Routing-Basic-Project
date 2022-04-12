@@ -19,8 +19,13 @@ Route::get('/', function () {
 
 
 // Route for demo page
-Route::get('/demo', function () {
-    return view('demo');
+//here id is optional perameter , Route will work perfectly even if id is not provided
+Route::get('/demo/{name}/{id?}', function ($name,$id=null) {
+    
+    // echo $name;
+    // echo $id;
+    $data=compact("name","id");
+    return view("demo")->with($data);
 });
 
 //testing route
